@@ -16,14 +16,24 @@ import java.io.Serializable
  * Tastes great with RxJava!
  */
 data class Optional<T>(val value: T? = null) : Serializable {
+
+    /**
+     * Check if the value is null or not.
+     */
     val isPresent get() = value != null
 
+    /**
+     * Execute a block of code only if the item is present
+     */
     inline infix fun whenPresent(block: (T) -> Unit): Optional<T> {
         if (value != null) block(value)
 
         return this
     }
 
+    /**
+     * Execute a block of code only if the item is absent
+     */
     inline infix fun whenAbsent(block: () -> Unit): Optional<T> {
         if (value == null) block()
 
