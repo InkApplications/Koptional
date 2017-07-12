@@ -3,6 +3,8 @@ Koptional ⚡️
 
 Not the Optional Kotlin wanted, but the Optional it deserves.. 😩
 
+🍻 Tastes Great with RxJava!™
+
 What is Koptional?
 ------------------
 
@@ -22,7 +24,7 @@ the nullability of values, and sometimes fails.
 Optional.of(maybeInt) // Returns Optional<Int?> in Arrow/Guava 😧
 ```
 
-Koptional lets Kotlin's nullability feature's shine by directly allowing you
+Koptional lets Kotlin's nullability features shine by directly allowing you
 read access to the value of the optional, you can continue to use kotlin's
 features for null checks directly
 
